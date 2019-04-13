@@ -1,0 +1,38 @@
+{
+  "name": "endpoints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier --check **/*.{json,html,md}",
+    "prettify:fix": "prettier --write **/*.{json,html,md}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndthanhdev/endpoints.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndthanhdev/endpoints/issues"
+  },
+  "homepage": "https://github.com/ndthanhdev/endpoints#readme",
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{json,html,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
